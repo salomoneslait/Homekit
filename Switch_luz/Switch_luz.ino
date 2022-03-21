@@ -27,8 +27,8 @@ extern "C" homekit_characteristic_t cha_switch1_on;
 static uint32_t next_heap_millis = 0;
 
 // switches and relay pin definition 
-#define S1 2
-#define R1 8
+#define S1 4
+#define R1 2
 
 //#define DEBUG_SW 8
 //#define PIN_SWITCH 0

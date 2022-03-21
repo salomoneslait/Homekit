@@ -21,14 +21,14 @@ void my_accessory_identify(homekit_value_t _value) {
 homekit_characteristic_t cha_switch_on = HOMEKIT_CHARACTERISTIC_(ON, false);
 
 // format: string; HAP section 9.62; max length 64
-homekit_characteristic_t cha_name = HOMEKIT_CHARACTERISTIC_(NAME, "Switch ESP-01s ");
+homekit_characteristic_t cha_name = HOMEKIT_CHARACTERISTIC_(NAME, "Switch ESP8266 ");
 
 homekit_accessory_t *accessories[] = {
     HOMEKIT_ACCESSORY(.id=1, .category=homekit_accessory_category_switch, .services=(homekit_service_t*[]) {
         HOMEKIT_SERVICE(ACCESSORY_INFORMATION, .characteristics=(homekit_characteristic_t*[]) {
-            HOMEKIT_CHARACTERISTIC(NAME, "Switch"),
+            HOMEKIT_CHARACTERISTIC(NAME, "Plantass"), // cambiar para mas accesorios
             HOMEKIT_CHARACTERISTIC(MANUFACTURER, "Arduino HomeKit"),
-            HOMEKIT_CHARACTERISTIC(SERIAL_NUMBER, "0123456"),
+            HOMEKIT_CHARACTERISTIC(SERIAL_NUMBER, "01238456"),
             HOMEKIT_CHARACTERISTIC(MODEL, "ESP8266"),
             HOMEKIT_CHARACTERISTIC(FIRMWARE_REVISION, "1.0"),
             HOMEKIT_CHARACTERISTIC(IDENTIFY, my_accessory_identify),
@@ -46,5 +46,5 @@ homekit_accessory_t *accessories[] = {
 
 homekit_server_config_t config = {
 		.accessories = accessories,
-		.password = "222-22-222"
+		.password = "444-11-555"
 };

@@ -1,3 +1,4 @@
+// borrar memoria py -3.10 -m esptool --chip esp8266 --port COM8 erase_flash
 #include <Arduino.h>
 #include <arduino_homekit_server.h>
 #include "wifi_info.h"
@@ -51,7 +52,7 @@ void my_homekit_setup() {
 
 void my_homekit_loop() {
 	arduino_homekit_loop();
-  switch_feedback_function();
+  //switch_feedback_function();
 	const uint32_t t = millis();
 	if (t > next_heap_millis) {
 		// show heap info every 5 seconds
